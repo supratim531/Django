@@ -14,6 +14,7 @@ class StudentListAPIView(ListAPIView):
   filter_backends = [SearchFilter, DjangoFilterBackend, OrderingFilter]
   filterset_fields = ["city"] # -> this is for DjangoFilterBackend
   search_fields = ["^name"]
+  # ordering_fields = ["city"] # if not mentioned then it will use all fields by default
   # search_fields = ["name", "city", "passby"]
   # search_fields = ["^name", "city"] # it implies startswith character for name fields and this is for SearchFilter
 
